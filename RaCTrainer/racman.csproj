@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="func.cs" />
     <Compile Include="offsets\rac1.cs" />
+    <Compile Include="SaveFilesWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SaveFilesWindow.Designer.cs">
+      <DependentUpon>SaveFilesWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="UnlocksWindow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +89,9 @@
     </Compile>
     <EmbeddedResource Include="AttachPS3Form.resx">
       <DependentUpon>AttachPS3Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaveFilesWindow.resx">
+      <DependentUpon>SaveFilesWindow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UnlocksWindow.resx">
       <DependentUpon>UnlocksWindow.cs</DependentUpon>

@@ -50,6 +50,7 @@ namespace racman
             this.label8 = new System.Windows.Forms.Label();
             this.unlocksWindowButton = new System.Windows.Forms.Button();
             this.infHealth = new System.Windows.Forms.CheckBox();
+            this.savesWIndowButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
@@ -270,12 +271,23 @@ namespace racman
             this.infHealth.UseVisualStyleBackColor = true;
             this.infHealth.CheckedChanged += new System.EventHandler(this.infHealth_Checkbox_Changed);
             // 
+            // savesWIndowButton
+            // 
+            this.savesWIndowButton.Location = new System.Drawing.Point(12, 175);
+            this.savesWIndowButton.Name = "savesWIndowButton";
+            this.savesWIndowButton.Size = new System.Drawing.Size(75, 23);
+            this.savesWIndowButton.TabIndex = 73;
+            this.savesWIndowButton.Text = "Save Files";
+            this.savesWIndowButton.UseVisualStyleBackColor = true;
+            this.savesWIndowButton.Click += new System.EventHandler(this.savesWIndowButton_Click);
+            // 
             // RAC1Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(380, 231);
+            this.Controls.Add(this.savesWIndowButton);
             this.Controls.Add(this.unlocksWindowButton);
             this.Controls.Add(this.infHealth);
             this.Controls.Add(this.label8);
@@ -332,6 +344,7 @@ namespace racman
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button unlocksWindowButton;
         private System.Windows.Forms.CheckBox infHealth;
+        private System.Windows.Forms.Button savesWIndowButton;
     }
 }
 

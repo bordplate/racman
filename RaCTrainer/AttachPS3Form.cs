@@ -21,7 +21,7 @@ namespace racman
 
             if (File.Exists(Environment.CurrentDirectory + @"\config.txt"))
             {
-                ip = func.GetConfigData("config.txt", "ip");//ip = File.ReadAllText(Environment.CurrentDirectory + @"\config.txt");
+                ip = func.GetConfigData("config.txt", "ip");
             }
             else
             {
@@ -33,6 +33,7 @@ namespace racman
         public static string ip;
         public static int pid;
         public static string game;
+        public static string user;
 
 
         private void AttachPS3Form_Load(object sender, EventArgs e)
@@ -43,12 +44,12 @@ namespace racman
         private void attachButton_Click(object sender, EventArgs e)
         {
             ip = IPTextBox.Text;
-            //File.WriteAllText(Environment.CurrentDirectory + @"\config.txt", ip);
             func.ChangeFileLines("config.txt", Convert.ToString(ip), "ip");
             try
             {
                 game = func.current_game(ip);
                 pid = func.current_pid(ip);
+                user = func.current_user(ip);
             }
             catch
             {

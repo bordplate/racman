@@ -68,6 +68,12 @@ namespace racman
             int gamePos = Output.IndexOf("target=\"_blank\">")+16;
             return Output.Substring(gamePos, 9);
         }
+        public static string current_user(string ip)
+        {
+            string Output = get_data($"http://{ip}/cpursx.ps3?/sman.ps3");
+            int userPos = Output.IndexOf("dev_hdd0/home/") + 14;
+            return Output.Substring(userPos, 8);
+        }
         public static void WriteMemory(string ip, int pid, uint offset, string val/*byte[] memory*/)
         {
             string addr = Convert.ToString(offset, 16);
@@ -86,13 +92,11 @@ namespace racman
 
         public static void UploadFile(string ip, string file)
         {
-            try
-            {
-                client.UploadFile($"ftp://{ip}:21/dev_hdd0/game/NPEA00387/USRDIR/EBOOT.BIN", file);
-            }
-            catch
-            {
-            }
+            try { client.UploadFile($"ftp://{ip}:21/dev_hdd0/game/NPEA00387/USRDIR/EBOOT.BIN", file); } catch { }
+        }
+        public static void DownloadFile(string ip, string file)
+        {
+            try { client.DownloadFile($"ftp://{ip}:21/dev_hdd0/game/NPEA00387/USRDIR/EBOOT.BIN", file); } catch { }
         }
 
         public static void WriteMemory_SingleByte(string ip, int pid, uint offset, string val/*byte[] memory*/)

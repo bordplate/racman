@@ -57,7 +57,8 @@ namespace racman
             }
         }
 
-        public Form UnlocksWindow; 
+        public Form UnlocksWindow;
+        public Form SaveFilesWindow;
         public static string ip = AttachPS3Form.ip;
         public static int pid = AttachPS3Form.pid;
 
@@ -259,6 +260,16 @@ namespace racman
         private void UnlocksWindow_FormClosed(object sender, FormClosedEventArgs e)
         {
             UnlocksWindow = null;
+        }
+
+        private void savesWIndowButton_Click(object sender, EventArgs e)
+        {
+            if (SaveFilesWindow == null)
+            {
+                SaveFilesWindow = new SaveFilesWindow();
+                SaveFilesWindow.FormClosed += UnlocksWindow_FormClosed;
+                SaveFilesWindow.Show();
+            }
         }
     }
 }
