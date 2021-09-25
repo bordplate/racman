@@ -2,6 +2,6 @@
 <item>
     <version>2.0.0.0</version>
     <url>https://github.com/MichaelRelaxen/racman/releases/download/Refresh.v1.2.0.2/racman.Ratchetron.v1.2.0.2.zip</url>
-    <changelog>https://github.com/MichaelRelaxen/racman/releases/tag/Refresh.v1.2.0.2</changelog>
+    <changelog>https://bordplate.github.io/racman/2.0.0.0.html</changelog>
     <mandatory>false</mandatory>
 </item>
